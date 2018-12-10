@@ -1,0 +1,111 @@
+import RPi.GPIO as gpio
+import pyautogui
+import time
+
+
+gpio.setmode(gpio.BOARD)
+
+#Player1
+
+gpio.setup(40, gpio.IN, pull_up_down = gpio.PUD_DOWN) #cima
+gpio.setup(38, gpio.IN, pull_up_down = gpio.PUD_DOWN) #baixo
+gpio.setup(35, gpio.IN, pull_up_down = gpio.PUD_DOWN) #esquerda
+gpio.setup(39, gpio.IN, pull_up_down = gpio.PUD_DOWN) #direita
+gpio.setup(36, gpio.IN, pull_up_down = gpio.PUD_DOWN) #start
+gpio.setup(33, gpio.IN, pull_up_down = gpio.PUD_DOWN) #select
+gpio.setup(32, gpio.IN, pull_up_down = gpio.PUD_DOWN) #Y
+gpio.setup(31, gpio.IN, pull_up_down = gpio.PUD_DOWN) #X
+gpio.setup(29, gpio.IN, pull_up_down = gpio.PUD_DOWN) #B
+gpio.setup(26, gpio.IN, pull_up_down = gpio.PUD_DOWN) #A
+gpio.setup(24, gpio.IN, pull_up_down = gpio.PUD_DOWN) #L1
+gpio.setup(23, gpio.IN, pull_up_down = gpio.PUD_DOWN) #R1
+
+#Player2
+
+gpio.setup(11, gpio.IN, pull_up_down = gpio.PUD_DOWN) #cima
+gpio.setup(7, gpio.IN, pull_up_down = gpio.PUD_DOWN) #baixo
+gpio.setup(8, gpio.IN, pull_up_down = gpio.PUD_DOWN) #esquerda
+gpio.setup(10, gpio.IN, pull_up_down = gpio.PUD_DOWN) #direita
+gpio.setup(13, gpio.IN, pull_up_down = gpio.PUD_DOWN) #start
+gpio.setup(12, gpio.IN, pull_up_down = gpio.PUD_DOWN) #select
+gpio.setup(15, gpio.IN, pull_up_down = gpio.PUD_DOWN) #Y
+gpio.setup(16, gpio.IN, pull_up_down = gpio.PUD_DOWN) #X
+gpio.setup(19, gpio.IN, pull_up_down = gpio.PUD_DOWN) #B
+gpio.setup(22, gpio.IN, pull_up_down = gpio.PUD_DOWN) #A
+gpio.setup(26, gpio.IN, pull_up_down = gpio.PUD_DOWN) #L1
+gpio.setup(18, gpio.IN, pull_up_down = gpio.PUD_DOWN) #R1
+
+
+while 1:
+
+     if(gpio.input(40)==0):
+       pyautogui.keyDown("w") 
+     else :
+       pyautogui.keyUp("w")
+
+
+     if(gpio.input(38)==0):
+       pyautogui.keyDown("s") 
+     else :
+       pyautogui.keyUp("s")
+
+
+     if(gpio.input(35)==0):
+       pyautogui.keyDown("a") 
+     else :
+       pyautogui.keyUp("a")
+
+
+     if(gpio.input(39)==0):
+       pyautogui.keyDown("d") 
+     else :
+       pyautogui.keyUp("d")
+
+      
+     if(gpio.input(36)==0):
+       pyautogui.keyDown("q") 
+     else :
+       pyautogui.keyUp("q")
+       
+
+     if(gpio.input(33)==0):
+       pyautogui.keyDown("e") 
+     else :
+       pyautogui.keyUp("e")
+
+       
+     if(gpio.input(32)==0):
+       pyautogui.keyDown("r") 
+     else :
+       pyautogui.keyUp("r")
+
+       
+     if(gpio.input(31)==0):
+       pyautogui.keyDown("t") 
+     else :
+       pyautogui.keyUp("t")
+
+       
+     if(gpio.input(29)==0):
+       pyautogui.keyDown("f") 
+     else :
+       pyautogui.keyUp("f")
+
+       
+     if(gpio.input(26)==0):
+       pyautogui.keyDown("g") 
+     else :
+       pyautogui.keyUp("g")
+
+       
+     if(gpio.input(24)==0):
+       pyautogui.keyDown("y") 
+     else :
+       pyautogui.keyUp("y")
+
+       
+     if(gpio.input(23)==0):
+       pyautogui.keyDown("h") 
+     else :
+       pyautogui.keyUp("h")
+       
